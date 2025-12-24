@@ -1,7 +1,9 @@
 import openai
 import os
+from dotenv import load_dotenv
 
-openai.api_key = os.getenv("OPENAI_API_KEY", "sk-...your-key...")
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def summarize(text):
     # Replace with your preferred LLM or summarizer
